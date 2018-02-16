@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register | Saankethika</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200' rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="reg.css" />
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="../css/foot.css">
+    <link rel="stylesheet" href="../css/cadetnav.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script language="JavaScript" type="text/javascript" src="/js/jquery-1.2.6.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.min.js" type="text/javascript"></script>
+
+
+</head>
+
+<body ng-controller="regFormController">
+    <header>
+        <brand>
+            <a href='../'><img src="../img/nav-foot-logo.png"></a>
+        </brand>
+        <openclose>
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </openclose>
+        <links>
+            <a href='../'>Home</a>
+            <a href='../events/'>Events</a>
+            <a href='../workshops/'>Workshops</a>
+            <a href='../aboutus/'>About-us</a>
+            <a href='../register/' class="linkactive">Register</a>
+        </links>
+    </header>
+    <div id="reg" class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12 col-lg-12 col-xxs-12">
+                <div class="title-block">
+                    <h1>Register</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2" style="padding:0">
+                <div class='card-hack'>
+                    <h3 style="text-align:center;">Instructions</h3>
+                    <ul>
+                        <li><strong>All Students must bring their college ID Card</strong></li>
+                        <li>Students are asked come in formal dress.</li>
+                        <li>Decision of the judges will be final and will not be subjected to any further discussions.</li>
+                        <li>Registration fee is Rs. 100/- per team to attend the “Hands on Training in Image Processing using Matlab Tool”.</li>
+                        <li>payment for workshop will be done on Spot.</li>
+                        <li>Online Registration closes on <strong> 25th February.</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <form class="form-horizontal fc col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2" role="form" id="ContactForm">
+
+
+                <div class="form-group" ng-class="{ 'has-error' : regForm.uname.$error.required && !regForm.uname.$pristine }">
+                    <label class="control-label col-xs-2" for="uname"><i class="fa fa-user" aria-hidden="true"></i></label>
+                    <div class="col-xs-10">
+                        <input type="text" class="form-control" id="name" placeholder="Full Name*" required>
+                    </div>
+                </div>
+                <div class="form-group" ng-class="{ 'has-error' : regForm.college.$error.required && !regForm.college.$pristine }">
+                    <label class="control-label col-xs-2" for="college"><i class="fa fa-university" aria-hidden="true"></i></label>
+                    <div class="col-xs-10">
+                        <input type="text" class="form-control" placeholder="College Name*" required>
+                    </div>
+                </div>
+
+                <div class="form-group" ng-class="{ 'has-error' : invalidYearSelection}">
+                    <label class="control-label col-xs-2" for="year"><i class="fa fa-calendar" aria-hidden="true"></i></label>
+                    <div class="col-xs-9">
+                        <select class="form-control">
+                            <option value="">Year</option>
+                            <option value="">I</option>
+                            <option value="">II</option>
+                            <option value="">III</option>
+                            <option value="">IV</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group" ng-class="{ 'has-error' : invalidBranchSelection}">
+                    <label class="control-label col-xs-2" for="branch"><i class="fa fa-certificate" aria-hidden="true"></i></label>
+                    <div class="col-xs-9">
+                        <select class="form-control">
+                            <option value=""><strong>Branch</strong></option>
+                            <option value="">Aerospace</option>
+                            <option value="">Agriculture</option>
+                            <option value="">Arts & Science</option>
+                            <option value="">Automobiles</option>
+                            <option value="">Biomedical</option>
+                            <option value="">Branch</option>
+                            <option value="">Chemical</option>
+                            <option value="">Civil</option>
+                            <option value="">CSE</option>
+                            <option value="">E&I</option>
+                            <option value="">ECE</option>
+                            <option value="">EEE</option>
+                            <option value="">IT</option>
+                            <option value="">Mech</option>
+                            <option value="">Mechatronics</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group" ng-class="{ 'has-error' : (regForm.email.$error.required  && !regForm.email.$pristine) || regForm.email.$error.email }">
+                    <label class="control-label col-xs-2" for="email"><i class="fa fa-envelope" aria-hidden="true"></i></label>
+                    <div class="col-xs-10">
+                        <input type="email" class="form-control" id="email" placeholder="Email*" required>
+                    </div>
+                </div>
+
+                <div class="form-group" ng-class="{ 'has-error' : (regForm.phone.$error.required || regForm.phone.$invalid) && !regForm.phone.$pristine }">
+                    <label class="control-label col-xs-2" for="phone"><i class="fa fa-phone" aria-hidden="true"></i></label>
+                    <div class="col-xs-10">
+                        <input type="text" class="form-control" id="num" placeholder="Mobile Number*" required>
+                    </div>
+                </div>
+                <div class="form-group" ng-class="{ 'has-error' : false }">
+                    <label class="control-label col-xs-2"><i class="fa fa-industry" aria-hidden="true"></i></label>
+                    <div class="col-xs-10">
+                        <span class="checkbox-desc-label checkbox-heading-desc-label">Flagship Events</span>
+                        <div>
+
+                            <ul class="checkbox-list">
+                                <script src="clear.js"></script>
+                                <form action="" method="post" name="ticks">
+                                    <li><span class="checkbox-desc-label">MATLAB Workshop</span><input type="checkbox" name="check[]" ng-model="data.workshops[0]" id="workshop1-checkbox" class="form-control yesno-checkbox" value="Matlab" name="workshops[]"><label for="workshop1-checkbox" class="yesno-value yesno-value-no">No</label><label for="workshop1-checkbox" class="yesno-value yesno-value-yes">Yes</label></li>
+                                    <li><span class="checkbox-desc-label">Hit In A Minute</span><input type="checkbox" name="check[]" ng-model="data.workshops[1]" id="workshop2-checkbox" class="form-control yesno-checkbox" value="Hit In A Minute" name="workshops[]"><label for="workshop2-checkbox" class="yesno-value yesno-value-no">No</label><label for="workshop2-checkbox" class="yesno-value yesno-value-yes">Yes</label></li>
+                                    <li><span class="checkbox-desc-label">Wit Par Chartam</span><input type="checkbox" name="check[]" ng-model="data.workshops[2]" id="workshop3-checkbox" class="form-control yesno-checkbox" value="Wit Par Chartam" name="workshops[]"><label for="workshop3-checkbox" class="yesno-value yesno-value-no">No</label><label for="workshop3-checkbox" class="yesno-value yesno-value-yes">Yes</label></li>
+                                    <li><span class="checkbox-desc-label">Technical Castle</span><input type="checkbox" name="check[]" ng-model="data.workshops[3]" id="workshop4-checkbox" class="form-control yesno-checkbox" value="Technical Castle" name="workshops[]"><label for="workshop4-checkbox" class="yesno-value yesno-value-no">No</label><label for="workshop4-checkbox" class="yesno-value yesno-value-yes">Yes</label></li>
+                                    <li><span class="checkbox-desc-label">Adventure Knockdown</span><input type="checkbox" name="check[]" ng-model="data.workshops[4]" id="workshop5-checkbox" class="form-control yesno-checkbox" value="Adventure Knockdown" name="workshops[]"><label for="workshop5-checkbox" class="yesno-value yesno-value-no">No</label><label for="workshop5-checkbox" class="yesno-value yesno-value-yes">Yes</label></li>
+                                    <li><span class="checkbox-desc-label">Instant Analyser</span><input type="checkbox" name="check[]" ng-model="data.workshops[5]" id="workshop6-checkbox" class="form-control yesno-checkbox" value="Instant Analyser" name="workshops[]"><label for="workshop6-checkbox" class="yesno-value yesno-value-no">No</label><label for="workshop6-checkbox" class="yesno-value yesno-value-yes">Yes</label></li>
+                                    <p></p>
+                                </form>
+
+                                <div class="form-group">
+                                    <div class="col-sm-offset-3 col-sm-6">
+                                        <button id="but" class="btn btn-default"><strong>Register</strong></button>
+                                    </div>
+                                </div>
+                                <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="fbg">
+        <div class="container footer">
+            <div class="row">
+                <div class="col-xs-3 col-xs-offset-1 col-md-3 col-md-offset-2 little-about-box"><img src="../img/nav-foot-logo.svg" width="150px">
+                    <p class="little-about">A Techincal Aspiration.</p>
+                </div>
+                <div class="col-xs-3 quick-link-box hidden-xs">
+                    <h4>Quick Links</h4>
+                    <p class="quick-links"><a href="../">Home</a> / <a href="../events/">Events</a> / <a href="../workshops/">Workshops</a> / <a href="">Register</a></p>
+                </div>
+                <div class="col-xs-3 col-xs-offset-3 col-sm-offset-2 col-md-3 col-sm-offset-0 quick-link-box">
+                    <h4>Get In Touch</h4>
+                    <div class="social-link-container">
+                        <a href="https://www.facebook.com/Saankethika-2k18-1876858102604253/" target="_blank">
+                            <div class="social-link fb"><i class="fa fa-facebook fa-lg"></i></div>
+                        </a>
+                        <a href="https://twitter.com/Saankethika2k18" target="_blank">
+                            <div class="social-link tw"><i class="fa fa-twitter fa-lg"></i></div>
+                        </a>
+                        <a href="https://plus.google.com/u/1/116311084578402999223" target="_blank">
+                            <div class="social-link g-plus"><i class="fa fa-google-plus"></i></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="attr-block">
+            <div class="credits">Developed by <a href="/developer/" target="_blank"> MAVULURU VISWAJITH REDDY </a></div>
+            <div class="copyright">Electronics And Communication Department</div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+
+    <script src="main.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113987625-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-113987625-1');
+    </script>
+</body>
+
+</html>

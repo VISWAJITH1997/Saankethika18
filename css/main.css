@@ -1,0 +1,1485 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.6.3');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.fa-lg {
+    font-size: 1.33333333em;
+    line-height: .75em;
+    vertical-align: -15%
+}
+
+.fa-2x {
+    font-size: 2em
+}
+
+.fa-3x {
+    font-size: 3em
+}
+
+.fa-4x {
+    font-size: 4em
+}
+
+.fa-5x {
+    font-size: 5em
+}
+
+.fa-fw {
+    width: 1.28571429em;
+    text-align: center
+}
+
+.fa-ul {
+    padding-left: 0;
+    margin-left: 2.14285714em;
+    list-style-type: none
+}
+
+.fa-ul > li {
+    position: relative
+}
+
+.fa-li {
+    position: absolute;
+    left: -2.14285714em;
+    width: 2.14285714em;
+    top: .14285714em;
+    text-align: center
+}
+
+.fa-li.fa-lg {
+    left: -1.85714286em
+}
+
+.fa-border {
+    padding: .2em .25em .15em;
+    border: solid .08em #eee;
+    border-radius: .1em
+}
+
+.fa-pull-left {
+    float: left
+}
+
+.fa-pull-right {
+    float: right
+}
+
+.fa.fa-pull-left {
+    margin-right: .3em
+}
+
+.fa.fa-pull-right {
+    margin-left: .3em
+}
+
+.pull-right {
+    float: right
+}
+
+.pull-left {
+    float: left
+}
+
+.fa.pull-left {
+    margin-right: .3em
+}
+
+.fa.pull-right {
+    margin-left: .3em
+}
+
+.fa-spin {
+    -webkit-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear
+}
+
+.fa-pulse {
+    -webkit-animation: fa-spin 1s infinite steps(8);
+    animation: fa-spin 1s infinite steps(8)
+}
+
+@-webkit-keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}
+
+@keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}
+
+.fa-rotate-90 {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+
+.fa-rotate-180 {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.fa-rotate-270 {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg)
+}
+
+.fa-flip-horizontal {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+    -webkit-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1)
+}
+
+.fa-flip-vertical {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+    -webkit-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1)
+}
+
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical {
+    filter: none
+}
+
+.fa-stack {
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle
+}
+
+.fa-stack-1x {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center
+}
+
+.fa-facebook-official:before {
+    content: "\f230"
+}
+
+.fa-twitter:before {
+    content: "\f099"
+}
+
+.fa-facebook-f:before,
+.fa-facebook:before {
+    content: "\f09a"
+}
+
+.fa-medium:before {
+    content: "\fOd5"
+}
+
+html,
+body {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.screen-1 {
+    background: #4dd0e1;
+    background: -webkit-linear-gradient(top, #2ca8e1, #4dd0e1);
+    background: -o-linear-gradient(bottom, #2ca8e1, #4dd0e1);
+    background: -moz-linear-gradient(bottom, #2ca8e1, #4dd0e1);
+    background: linear-gradient(to bottom, #2ca8e1, #4dd0e1);
+    /*position: absolute;
+    display: table;*/
+    min-height: 480px;
+    max-height: 700px;
+    width: 100%;
+    height: 600px;
+    left: 0;
+    top: 0;
+}
+
+.scene {
+    min-height: 460px;
+    position: relative;
+    list-style-type: none;
+}
+
+.layer {
+    width: 100%;
+}
+
+.bush {
+    position: absolute;
+    width: 300%;
+    left: -100%;
+    margin: 0px 0px;
+    background-image: url("../img/bush.png");
+    background-repeat: repeat-x;
+    -webkit-animation: wave 4s 0.1s infinite linear;
+    -moz-animation: wave 4s 0.1s infinite linear;
+    animation: wave 4s 0.1s infinite linear;
+}
+
+.depth-100 {
+    top: 500px;
+    background-size: 500px 100px;
+    height: 100px;
+}
+
+.depth-90 {
+    top: 490px;
+    height: 90px;
+    background-size: 500px 90px;
+    background-position-x: 150px;
+}
+
+.bush-base {
+    background-color: #388e3c;
+    position: absolute;
+    display: block;
+    content: "";
+    height: 50px;
+    width: 100%;
+    top: 550px;
+    left: 0;
+}
+
+#ssn {
+    background: url("../img/ssn.png") no-repeat;
+    background-size: 400px 120px;
+    position: absolute;
+    left: 450px;
+    top: 440px;
+    width: 400px;
+    height: 120px;
+
+}
+
+#gate {
+    background: url("../img/gate.png") no-repeat;
+    background-size: 650px 360px;
+    position: absolute;
+    left: 330px;
+    top: 220px;
+    width: 650px;
+    height: 360px;
+}
+
+#sun {
+    background: url("../img/sun.png") no-repeat;
+    background-size: 900px 400px;
+    position: absolute;
+    left: 200px;
+    top: 190px;
+    width: 900px;
+    height: 400px;
+}
+
+#logo {
+    background: url("../img/logo.png") no-repeat;
+    background-size: 430px 160px;
+    position: absolute;
+    left: 440px;
+    top: 20px;
+    width: 430px;
+    height: 160px;
+}
+
+#logo p {
+    margin: 0;
+    height: 160px;
+}
+
+#logo > a {
+    text-indent: -9999px;
+}
+
+.cloud {
+    background: url("../img/cloud.png") no-repeat;
+    position: absolute;
+}
+
+.cloud-big {
+    background-size: 250px 150px;
+    width: 250px;
+    height: 150px;
+}
+
+.cloud-med {
+    background-size: 200px 100px;
+    width: 200px;
+    height: 100px;
+}
+
+.cloud > a {
+    color: #ff9800;
+    font-family: 'Titillium Web', sans-serif;
+    text-decoration: none;
+    text-align: center;
+    font-size: 22px;
+    font-variant: small-caps;
+    margin-top: 30px;
+}
+
+.cloud-big p {
+    padding-top: 60px;
+    height: 150px;
+}
+
+.cloud-med p {
+    padding-top: 35px;
+    height: 100px;
+}
+
+.cloud-1 {
+    left: 40px;
+    top: 30px;
+}
+
+.cloud-2 {
+    right: 60px;
+    top: 60px;
+}
+
+.cloud-3 {
+    left: 75px;
+    top: 250px;
+}
+
+.cloud-4 {
+    right: 60px;
+    top: 300px;
+}
+
+.cloud-small {
+    background: url("../img/cloud-2.png") no-repeat;
+    position: absolute;
+    background-size: 60px 40px;
+    width: 60px;
+    height: 40px;
+}
+
+#cl-1 {
+    left: 200px;
+    top: 20px;
+}
+
+#cl-2 {
+    right: 300px;
+    top: 200px;
+}
+
+#cl-3 {
+    left: 300px;
+    top: 250px;
+}
+
+#cl-4 {
+    right: 20px;
+    top: 350px;
+}
+
+#cl-5 {
+    right: 400px;
+    top: 30px;
+}
+
+.plane {
+    background: url("../img/plane.png") no-repeat;
+    position: absolute;
+    background-size: 300px 62px;
+    width: 300px;
+    height: 62px;
+    left: 75px;
+    top: 330px;
+}
+
+/* media queries for top section */
+
+@media only screen and (max-width: 1000px) {
+    .depth-100 {
+        background-size: 400px 80px;
+        height: 80px;
+    }
+    .depth-90 {
+        height: 70px;
+        background-size: 400px 70px;
+        background-position-x: 100px;
+    }
+    .bush-base {
+        height: 40px;
+    }
+    #ssn {
+        background-size: 250px 70px;
+        width: 250px;
+        height: 70px;
+        padding-bottom: 80px;
+    }
+    #gate {
+        background-size: 500px 230px;
+        width: 500px;
+        height: 230px;
+        padding-bottom: 240px;
+    }
+    #sun {
+        background-size: 600px 300px;
+        width: 600px;
+        height: 300px;
+    }
+    #logo {
+        background-size: 300px 110px;
+        width: 300px;
+        height: 110px;
+    }
+
+    .cloud-big {
+        background-size: 170px 100px;
+        width: 170px;
+        height: 100px;
+    }
+    .cloud-med {
+        background-size: 120px 60px;
+        width: 120px;
+        height: 60px;
+    }
+    .cloud-big p {
+        padding-top: 30px;
+        height: 100px;
+    }
+    .cloud-med p {
+        padding-top: 15px;
+        height: 60px;
+    }
+
+    .cloud-1 {
+        left: 20px;
+        top: 120px;
+    }
+    .cloud-2 {
+        right: 30px;
+        top: 150px;
+    }
+    .cloud-3 {
+        left: 50px;
+        top: 250px;
+    }
+    .cloud-4 {
+        right: 60px;
+        top: 350px;
+    }
+
+    .cloud-small {
+        background-size: 40px 30px;
+        width: 40px;
+        height: 30px;
+    }
+    #cl-1 {
+        left: 70px;
+        top: 20px;
+        display: none;
+    }
+    #cl-2 {
+        right: 200px;
+        top: 200px;
+    }
+    #cl-3 {
+        left: 200px;
+        top: 250px;
+    }
+    #cl-4 {
+        right: 20px;
+        top: 350px;
+    }
+    #cl-5 {
+        right: 100px;
+        top: 30px;
+    }
+
+    .plane {
+        left: 10px;
+        top: 250px;
+    }
+}
+
+.screen-2 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #ff9800;
+    background: -webkit-linear-gradient(top, #ee6e00, #ff9800);
+    background: -o-linear-gradient(bottom, #ee6e00, #ff9800);
+    background: -moz-linear-gradient(bottom, #ee6e00, #ff9800);
+    background: linear-gradient(to bottom, #ee6e00, #ff9800);
+}
+
+.title-block {
+    width: 40%;
+    border-bottom: 1px solid #fefefe;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.title-block h1 {
+    color: #fefefe;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 200;
+}
+
+.title-block:after {
+    content: ' ';
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #fefefe;
+    position: absolute;
+    margin-left: -20px;
+    left: 50%;
+}
+
+.left-bulb,
+.right-bulb {
+    height: 500px;
+}
+
+.right-bulb {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.about-wrap {
+    color: #fefefe;
+    margin-top: 80px;
+}
+
+.about-wrap > p {
+    font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 200;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.screen-4 {
+    position: relative;
+    padding-bottom: 50px;
+    background: #E65100;
+    background: -webkit-linear-gradient(top, #d83f00, #E65100);
+    background: -o-linear-gradient(bottom, #d83f00, #E65100);
+    background: -moz-linear-gradient(bottom, #d83f00, #E65100);
+    background: linear-gradient(to bottom, #d83f00, #E65100);
+}
+
+.pipe {
+    width: 100%;
+    background: url("../img/pipe.png") repeat-x;
+    background-size: contain;
+    background-position-x: 200px;
+    height: 150px;
+    position: absolute;
+    top: -20px;
+}
+
+
+/*.hexagon {
+  position: relative;
+  width: 300px; 
+  height: 173.21px;
+  background-color: #fbc02d;
+  margin: 86.60px auto;
+  -webkit-box-shadow: 8px 0px 40px #333;
+  -moz-box-shadow:    8px 0px 40px #333;
+  box-shadow:         8px 0px 40px #333; 
+
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  left: 0;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 86.60px solid #fbc02d;
+}
+
+.hexagon:after {
+  top: 100%;
+  border-top: 86.60px solid #fbc02d;
+}*/
+
+.bulb-row {
+    margin: 120px 0;
+}
+
+.circle-logo {
+    margin: 0 auto;
+    position: relative;
+}
+
+.six {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 300;
+    font-variant: small-caps;
+    color: #fefefe;
+    position: absolute;
+    border: 2px solid #fefefe;
+    padding: 10px;
+    text-align: center;
+    width: 300px;
+    border-radius: 100px;
+}
+
+.six-1 {
+    right: 370px;
+    top: -130px;
+}
+
+.six-2 {
+    right: 450px;
+    top: 50px;
+}
+
+.six-3 {
+    right: 370px;
+    top: 230px;
+}
+
+.six-4 {
+    left: 370px;
+    top: -130px;
+}
+
+.six-5 {
+    left: 450px;
+    top: 50px;
+}
+
+.six-6 {
+    left: 370px;
+    top: 230px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .bulb-row {
+        margin: 100px 0;
+    }
+    .six {
+        font-size: 16px;
+        width: 150px;
+    }
+
+    .six-1 {
+        right: 270px;
+        top: -100px;
+    }
+    .six-2 {
+        right: 350px;
+        top: 50px;
+    }
+    .six-3 {
+        right: 270px;
+        top: 230px;
+    }
+    .six-4 {
+        left: 270px;
+        top: -100px;
+    }
+    .six-5 {
+        left: 350px;
+        top: 50px;
+    }
+    .six-6 {
+        left: 270px;
+        top: 230px;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .bulb-row {
+        margin: 80px 0;
+    }
+    .six {
+        font-size: 14px;
+        width: 150px;
+    }
+
+    .six-1 {
+        right: 150px;
+        top: -100px;
+    }
+    .six-2 {
+        right: 250px;
+        top: 50px;
+    }
+    .six-3 {
+        right: 150px;
+        top: 230px;
+    }
+    .six-4 {
+        left: 150px;
+        top: -100px;
+    }
+    .six-5 {
+        left: 250px;
+        top: 50px;
+    }
+    .six-6 {
+        left: 150px;
+        top: 230px;
+    }
+}
+
+@media only screen and (max-width: 594px) {
+    .bulb-row {
+        margin: 30px 0 100px;
+    }
+    .six {
+        font-size: 12px;
+        width: 100px;
+    }
+
+    .six-1 {
+        right: 100px;
+        top: -80px;
+    }
+    .six-2 {
+        right: 200px;
+        top: 20px;
+    }
+    .six-3 {
+        right: 100px;
+        top: 140px;
+    }
+    .six-4 {
+        left: 100px;
+        top: -80px;
+    }
+    .six-5 {
+        left: 200px;
+        top: 20px;
+    }
+    .six-6 {
+        left: 100px;
+        top: 140px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .six-1 {
+        right: 90px;
+        top: -80px;
+    }
+    .six-2 {
+        right: 140px;
+        top: 20px;
+    }
+    .six-3 {
+        right: 90px;
+        top: 100px;
+    }
+    .six-4 {
+        left: 90px;
+        top: -80px;
+    }
+    .six-5 {
+        left: 140px;
+        top: 20px;
+    }
+    .six-6 {
+        left: 90px;
+        top: 100px;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .six {
+        width: 90px;
+    }
+    .six-1 {
+        right: 70px;
+        top: -70px;
+    }
+    .six-2 {
+        right: 90px;
+        top: 0px;
+    }
+    .six-3 {
+        right: 70px;
+        top: 80px;
+    }
+    .six-4 {
+        left: 70px;
+        top: -70px;
+    }
+    .six-5 {
+        left: 90px;
+        top: 0px;
+    }
+    .six-6 {
+        left: 70px;
+        top: 80px;
+    }
+}
+
+.team-grid {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.member-cell {
+    /*border: 1px solid #fefefe;*/
+    padding: 20px;
+}
+
+.member-name {
+    color: #fefefe;
+    font-size: 1.2em;
+}
+
+.member-contact {
+    color: #000000;
+    font-weight: 900;
+}
+
+.footer {
+    color: #cccecd;
+    background: #1d282e;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.little-about-box {
+    padding: 10px;
+}
+
+.little-about {
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.quick-link-box {
+    padding: 10px;
+}
+
+.quick-link-box {
+    text-align: center;
+}
+
+.quick-links {
+    margin-top: 45px;
+}
+
+.quick-links a,
+.social-link-container a {
+    text-decoration: none;
+    color: #cccecd;
+}
+
+.social-link-container {
+    margin: 40px auto 0 auto;
+    width: 190px;
+}
+
+.social-link {
+    display: inline-block;
+    float: left;
+    width: 40px;
+    height: 40px;
+    padding-top: 8px;
+    border-radius: 20px;
+    border: 2px solid #cccecd;
+    margin: 10px;
+    text-align: center;
+}
+
+.fb:hover,
+.tw:hover,
+.md:hover {
+    background: #fefefe;
+    border: 2px solid #fefefe;
+}
+
+.fb:hover {
+    color: #0e1f56;
+}
+
+.tw:hover {
+    color: #55acee;
+}
+
+.md:hover {
+    color: #3CB371;
+}
+
+.attr-block {
+    background: #121d21;
+    padding: 20px;
+    color: #cccecd;
+}
+
+.copyright {
+    width: 50%;
+    display: inline-block;
+    float: left;
+}
+
+.credits {
+    width: 50%;
+    display: inline-block;
+    right: 0;
+    text-align: right;
+}
+
+.credits a {
+    text-decoration: none;
+    color: #ff9800;
+}
+
+.credits a:focus,
+.credits a:hover {
+    color: #f26739;
+}
+
+
+@media (max-width: 550px) {
+    .social-link {
+        display: initial;
+        clear: left;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+
+/***********************************************************************************************
+                        STYLING : MUTHU ANNAMALAI
+*************************************************************************************************/
+
+.screen-3 {
+    background: -webkit-linear-gradient(#ee5800, #f57c00) no-repeat;
+    background: -moz-linear-gradient(#ee5800, #f57c00) no-repeat;
+    background: linear-gradient(#ee5800, #f57c00) no-repeat;
+    color: #fefefe;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.screen-4 {
+    background: -webkit-linear-gradient(#d83f00, #E65100) no-repeat;
+    background: -moz-linear-gradient(#d83f00, #E65100) no-repeat;
+    background: linear-gradient(#d83f00, #E65100) no-repeat;
+    color: #fefefe;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.screen-5 {
+    background: -webkit-linear-gradient(#c32b00, #D84315) no-repeat;
+    background: -moz-linear-gradient(#c32b00, #D84315) no-repeat;
+    background: linear-gradient(#c32b00, #D84315) no-repeat;
+    color: #fefefe;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.screen-5 a {
+    text-decoration: none;
+    color: #fefefe;
+}
+
+.screen-6 {
+    background-color: #37484f;
+}
+
+.bq {
+    text-align: center;
+    border: 2px solid #fefefe;
+    border-radius: 10px;
+    width: 60%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 20%;
+    padding: 20px 10px;
+}
+
+/*
+.bq:hover {
+  background: #fefefe;
+}
+
+.bq:hover>h1 {
+  color:#d83f00;
+}
+*/
+
+.bq > p {
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.bq > h1 {
+    font-weight: bold;
+    font-size: 3.5em;
+    text-transform: uppercase;
+}
+
+
+.screen-3 h1 {
+    font-size: 3em;
+    margin-top: -100px;
+    color: #fefefe;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 200;
+}
+
+.mu-row {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.mu-row a {
+    text-decoration: none;
+}
+
+.card {
+    overflow-y: hidden;
+    width: 220px;
+    height: 280px;
+    padding: 15px;
+    margin: 0 auto 15px;
+    background-color: #fefefe;
+    border-radius: 23px;
+    background: linear-gradient(to bottom, #fbc02d 0%, #fbc02d 80%, #fefefe 80%, #fefefe 100%);
+}
+
+.card:hover {
+    box-shadow: 0 4px 15px 1px #d83f00;
+}
+
+
+.card p {
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 2em;
+    color: #424242;
+    margin-top: 18px;
+}
+
+.circ {
+    margin-top: 10px;
+    margin-left: 5%;
+    width: 90%;
+    height: 180px;
+    border-radius: 50%;
+    color: #424242;
+    padding-top: 23px;
+    padding-left: auto;
+    text-align: center;
+    background-color: #fefefe;
+}
+
+.circ p {
+    font-size: 6em;
+    margin: auto;
+}
+
+.Phead {
+    width: 40%;
+    height: 1px;
+    background: #fefefe;
+    position: relative;
+}
+
+.Phead:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #fefefe;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    margin-left: -12px;
+}
+
+
+.brick {
+    width: 100%;
+    height: 150px;
+    background: url('../img/bricks.png') repeat-x;
+    background-size: contain;
+    background-position-x: 200px;
+}
+
+
+.grunge-1 {
+    width: 100%;
+    height: 100px;
+    background: url('../img/grunge.png') repeat-x;
+    background-size: contain;
+
+}
+
+.grunge-2 {
+    width: 100%;
+    height: 200px;
+    background: url('../img/grunge-2.png') repeat-x;
+    background-size: contain;
+}
+
+@media (max-width: 594px) {
+    .col-xxs-12 {
+
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        float: center;
+        width: 100%;
+
+    }
+
+    .bq > h1 {
+        font-size: 2.5em;
+
+    }
+}
+
+.six-list-box > a > h2:hover {
+    background: #fefefe;
+    color: #d83f00;
+}
+
+.saankethika {
+   align-items: center; 
+}
+
+
+
+.tagline {
+    color: #fff;
+    vertical-align: middle;
+    text-align: center;
+    text-shadow: 0 1px white;
+    font-weight: 250;
+    line-height: 18px;
+    padding: 9px 30px;
+    margin-top: 10px;
+    margin-left: 15%;
+    font-size: 14.6px;
+}

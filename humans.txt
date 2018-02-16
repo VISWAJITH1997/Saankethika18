@@ -1,0 +1,7 @@
+
+# The humans responsible # MAVULURU VISWAJITH REDDY -- Web Designer -- www.itslogicnotmagic.com  
+
+# THANKS
+
+    CSS3, HTML5
+, jQuery, Normalize.css
